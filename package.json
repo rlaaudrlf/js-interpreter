@@ -1,0 +1,11 @@
+{
+  "name": "ast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "JinMingJi",
+  "license": "mit",
+  "dependencies": {
+    "esprima": "^4.0.1"
+  }
+}

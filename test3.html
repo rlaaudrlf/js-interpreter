@@ -1,0 +1,63 @@
+<style>
+    .up {
+        height: 25%;
+        width: 100;
+        background: blue;
+    }
+
+    .middle {
+        width: 100;
+        height: 50%;
+        background: red;
+        ;
+
+    }
+</style>
+<div>
+    <div style="height:100;width:100;background: black;">
+        <div class="up"></div>
+        <div class="middle"></div>
+    </div>
+
+</div>
+<div style="height:100"></div>
+<div style="display: flex; align-items: center;width:100;height: 100;background:black;justify-content: center;">
+    <div style="width:30;height:30;background: white;"></div>
+</div>
+<div style="height:100"></div>
+<div style="height:100;position:absolute; width:100;background:black;">
+    <div style="width:50%;height: 50%;left:25%;top: 25% ;position: absolute;background:white"></div>
+</div>
+
+
+<script>
+    var a=1
+    var a=2
+    function validChars(str) {
+        let mapping = {}
+        mapping["<"] = ">"
+        mapping["["] = "]"
+
+        let stack = []
+
+        let next = undefined
+        for (const char of str) {
+            if (mapping[char]) {
+                stack.push(char)
+            }
+            else {
+                let value = stack.pop()
+                if (char != mapping[value]) {
+                    return false
+                }
+            }
+
+        }
+
+        return true
+    }
+
+    console.log(validChars("<>[]"))
+
+
+</script>
